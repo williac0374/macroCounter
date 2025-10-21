@@ -1,6 +1,6 @@
 {
   "name": "macroCounter",
-  "short_name": "Full",
+  "short_name": "macroCounter",
   "description": "Macro Tracking app",
   "scope": "/macroCounter/",
   "start_url": "/macroCounter/",

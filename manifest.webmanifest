@@ -1,0 +1,17 @@
+{
+  "name": "macroCounter",
+  "short_name": "Full",
+  "description": "Macro Tracking app",
+  "scope": "/macroCounter/",
+  "start_url": "/macroCounter/",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "display": "fullscreen", 
+  "icons": [
+      {
+        "src": "/macroCounter/icon-512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+  ]
+}

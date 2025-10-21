@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name='apple-mobile-web-app-capable' content='yes' />
+<meta name='viewport' content='initial-scale=1.0, maximum-scale=1.0, user-scalable=0, width=device-width, height=device-height' />
+<meta name='apple-mobile-web-app-status-bar-style' content='black-translucent' />
+<title>FULL</title>
+<link rel="canonical" href="https://williac0374.github.io/macroCounter/" />
+<link rel="manifest" href="/macroCounter/manifest.webmanifest">
+<style>
+/* CSS to disable scrolling and set fullscreen */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  /* Prevents scrolling */
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+canvas {
+  // border: 2px solid #000;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+</style>
+</head>
+<body>
+<canvas id="canvas" width="320" height="675"></canvas>
+<input id="fread" type='file' style="display: none" accept='.txt' onchange='openFile(event)'>
+<script>
+/* * 2. JavaScript Solution: Intercepts 'touchmove' events to block the pinch-zoom gesture.
+* This is often the most reliable method for recent versions of Chrome on Android.
+*/
+
+document.addEventListener('touchmove', function(event) {
+  // Check if there are more than one touch points (a pinch gesture)
+  if (event.touches.length > 1) {
+    // Prevent the default browser behavior (which includes zooming)
+    event.preventDefault();
+  }
+}, { passive: false }); // Use { passive: false } to ensure event.preventDefault() works
+  
+  // Optional: To block double-tap to zoom, though less common now:
+  var lastTouchEnd = 0;
+  document.addEventListener('touchend', function (event) {
+    var now = (new Date()).getTime();
+    // Check for double tap (two touchend events close together)
+    if (now - lastTouchEnd <= 300) {
+      event.preventDefault();
+    }
+    lastTouchEnd = now;
+  }, false);
+function start(){
+  
+}
+function loop(){
+//https://gemini.google.com/gem/2b4371018363/3e83852784fec2ca
+  //window.location.href = "new_url"
+  if(mouse_check()){
+    window.location.href = "https://gemini.google.com/gem/2b4371018363/3e83852784fec2ca"
+  }
+  
+}
+function draw(){
+draw_centered_text(canvas.width/2, canvas.height/2, "CLICK TO START", 32, 700) 
+}
+  </script>
+  <script type='text/javascript' src='engine.js'></script>
+  </body>
+  </html>
+  
+  
+  

@@ -1,2 +1,1 @@
-https://williac0374.github.io/macroCounter
-/index.html
+https://williac0374.github.io/macroCounter/index.html
